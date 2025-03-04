@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Biodata</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: auto; }
+        
+        /* Section 1: Menu */
+        nav { background: #333; color: white; padding: 15px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        
+        /* Section 2: Judul dan Gambar */
+        .hero { display: flex; align-items: center; justify-content: space-between; padding: 50px 0; }
+        .hero h1 { font-size: 36px; }
+        .hero img { width: 300px; height: auto; border-radius: 10px; }
+        
+        /* Section 3: About Me */
+        .about { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 50px 0; }
+        .about .box { background: #f4f4f4; padding: 20px; border-radius: 10px; text-align: center; }
+        
+        /* Section 4: Portfolio */
+        table { width: 100%; border-collapse: collapse; margin: 50px 0; }
+        table, th, td { border: 1px solid black; }
+        th, td { padding: 10px; text-align: center; }
+        th { background: #ddd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Section 1: Menu -->
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#portfolio">Portfolio</a>
+        </nav>
+        
+        <!-- Section 2: Judul dan Gambar -->
+        <div class="hero">
+            <div>
+                <h1>Selamat Datang di Halaman Profil Saya</h1>
+            </div>
+            <img src="profile.jpg" alt="Foto Profil">
+        </div>
+        
+        <!-- Section 3: About Me -->
+        <h2 id="about">About Me</h2>
+        <div class="about">
+            <div class="box">Nama: John Doe</div>
+            <div class="box">Umur: 25 Tahun</div>
+            <div class="box">Profesi: Web Developer</div>
+            <div class="box">Lokasi: Jakarta, Indonesia</div>
+            <div class="box">Email: johndoe@example.com</div>
+            <div class="box">Hobi: Coding & Musik</div>
+        </div>
+        
+        <!-- Section 4: Portfolio -->
+        <h2 id="portfolio">Portfolio</h2>
+        <table>
+            <tr>
+                <th>Proyek</th>
+                <th>Deskripsi</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Website E-Commerce</td>
+                <td>Website untuk toko online</td>
+                <td><a href="#">Lihat</a></td>
+            </tr>
+            <tr>
+                <td>Blog Pribadi</td>
+                <td>Blog untuk menulis artikel teknologi</td>
+                <td><a href="#">Lihat</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
