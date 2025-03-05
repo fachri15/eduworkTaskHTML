@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #007BFF;
+            padding: 15px;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .hero img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .bio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .bio div {
+            background: #007BFF;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .portfolio img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #007BFF;
+            color: white;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            .bio {
+                grid-template-columns: 1fr;
+            }
+            .portfolio {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div><b>Brand</b></div>
+            <div>
+                <a href="#header">Header</a>
+                <a href="#about">Biodata</a>
+                <a href="#portfolio">Portfolio</a>
+            </div>
+        </div>
+        
+        <div class="hero" id="header">
+            <div>
+                <h2>Selamat Datang di Website Saya</h2>
+                <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
+                <button>Pelajari Lebih Lanjut</button>
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/600x400/?person" alt="Gambar Header">
+            </div>
+        </div>
+        
+        <div class="bio" id="about">
+            <div><b>Full Name:</b> Dodi</div>
+            <div><b>Education:</b> S1 Informatika</div>
+            <div><b>Pekerjaan:</b> Programmer</div>
+            <div><b>Contact:</b> dodi@example.com</div>
+            <div><b>Hobi:</b> Membaca, Coding</div>
+            <div><b>Alamat:</b> Jakarta</div>
+        </div>
+        
+        <div class="portfolio" id="portfolio">
+            <div>
+                <img src="https://source.unsplash.com/350x200/?portfolio" alt="Proyek 1">
+                <h3>Proyek 1</h3>
+                <p>Deskripsi proyek 1.</p>
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/350x200/?technology" alt="Proyek 2">
+                <h3>Proyek 2</h3>
+                <p>Deskripsi proyek 2.</p>
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/350x200/?design" alt="Proyek 3">
+                <h3>Proyek 3</h3>
+                <p>Deskripsi proyek 3.</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            &copy; 2024 Dodi. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
